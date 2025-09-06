@@ -1,23 +1,21 @@
-# Block YouTube and related services
-127.0.0.1 youtube.com
-127.0.0.1 www.youtube.com
-127.0.0.1 m.youtube.com
-127.0.0.1 youtu.be
-127.0.0.1 img.youtube.com
-127.0.0.1 i.ytimg.com
-127.0.0.1 s.ytimg.com
-127.0.0.1 youtube-nocookie.com
-127.0.0.1 www.youtube-nocookie.com
-127.0.0.1 ytimg.com
-127.0.0.1 googlevideo.com
-127.0.0.1 www.googlevideo.com
-127.0.0.1 youtube.googleapis.com
-127.0.0.1 yt3.ggpht.com
-127.0.0.1 ytstatic.l.google.com
-127.0.0.1 manifest.googlevideo.com
-127.0.0.1 redirector.googlevideo.com
-127.0.0.1 r1---sn.googlevideo.com
-127.0.0.1 r2---sn.googlevideo.com
-127.0.0.1 r3---sn.googlevideo.com
-127.0.0.1 r4---sn.googlevideo.com
-# 
+! Title: YouTube full block (ABP/AdGuard)
+! Description: Blocks YouTube website, apps, Android TV by cutting primary domains, video CDN, images, and API backends
+! Version: 2025-09-06
+! Syntax: Adblock Plus
+
+! core website and variants
+||youtube.com^
+||youtube-nocookie.com^
+||youtubekids.com^
+||youtubestudio.com^
+||youtu.be^
+||yt.be^
+
+! video delivery and media cdns
+||googlevideo.com^
+||ytimg.com^
+||ggpht.com^
+
+! api backends used by apps and tv clients
+||youtubei.googleapis.com^
+||youtube.googleapis.com^
