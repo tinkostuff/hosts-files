@@ -1,0 +1,62 @@
+! Title: Epic Games / Fortnite full block (ABP/AdGuard)
+! Description: Blocks Epic Games services (store, launcher, Fortnite, EOS) and common CDNs/shorteners
+! Version: 2025-09-06
+! Syntax: Adblock Plus
+
+! core epic domains (covers all subdomains)
+||epicgames.com^
+||epicgames.dev^
+||epicgamescdn.com^
+
+! launcher / store / auth (redundant with apex, kept for clarity)
+||store.epicgames.com^
+||launcher.epicgames.com^
+||accounts.epicgames.com^
+||oauth.epicgames.com^
+||tracking.epicgames.com^
+||logs.epicgames.com^
+||static-assets-prod.epicgames.com^
+||assets.on.epicgames.com^
+
+! service cluster (redundant with apex)
+||*.ol.epicgames.com^
+||account-public-service-prod*.ol.epicgames.com^
+||friends-public-service-prod*.ol.epicgames.com^
+||entitlement-public-service-prod*.ol.epicgames.com^
+||catalog-public-service-prod*.ol.epicgames.com^
+||lightswitch-public-service-prod*.ol.epicgames.com^
+||launcher-public-service-prod*.ol.epicgames.com^
+||datastorage-public-service-*.ol.epicgames.com^
+
+! downloads / CDN used by the launcher
+||download*.epicgames.com^
+||epicgames-download*.akamaized.net^
+
+! fortnite
+||fortnite.com^
+||fn.gg^
+||cdn2.unrealengine.com^/fortnite/
+
+! epic online services (EOS)
+||api.epicgames.dev^
+||eos.epicgames.com^
+
+! easy anti-cheat (used by Epic titles)
+||easy.ac^
+||eac-cdn.com^
+
+! short links often used by epic
+||epic.gm^
+||egs.link^
+
+! optional: other epic-owned game properties (uncomment to block)
+! ||rocketleague.com^
+! ||psyonix.com^
+! ||fallguys.com^
+! ||mediatonicgames.com^
+
+! optional: unreal properties (will block docs/marketplace/CDN)
+! ||unrealengine.com^
+! ||cdn.unrealengine.com^
+
+! end of list
