@@ -1,71 +1,29 @@
-! Title: Browser Games Blocklist (ABP/AdGuard)
-! Description: Blocks popular browser game sites and portals
+! Title: Browser games blocklist (domain-only)
+! Description: Popular browser game portals and MMO hosts
 ! Version: 2025-09-06
 ! Syntax: Adblock Plus
 
-! miniclip
 ||miniclip.com^
-
-! kongregate
 ||kongregate.com^
-
-! newgrounds (games section)
-||newgrounds.com/portal/view/
-||uploads.ungrounded.net^
-
-! crazy games
+||newgrounds.com^
+||ungrounded.net^
 ||crazygames.com^
-
-! poki
 ||poki.com^
-
-! y8
 ||y8.com^
-
-! armor games
 ||armorgames.com^
-
-! addicting games
 ||addictinggames.com^
-
-! coolmath games
 ||coolmathgames.com^
-
-! friv (multiple mirrors)
 ||friv.com^
 ||friv4school.com^
 ||frivplus.com^
-
-! agame
 ||agame.com^
-
-! shockwave
 ||shockwave.com^
-
-! game distribution (backend for many embeds)
 ||gamedistribution.com^
-
-! lagged
 ||lagged.com^
-
-! nitrome
 ||nitrome.com^
-
-! spelletjes (big Dutch portal, many mirrors)
 ||spelletjes.nl^
-
-! freeonlinegames
 ||freeonlinegames.com^
-
-! gameforge (browser MMOs)
 ||gameforge.com^
-
-! bigpoint (browser MMOs)
 ||bigpoint.com^
 ||darkorbit.com^
 ||seafight.com^
-
-! ogame (classic browser MMO)
-||ogame.gameforge.com^
-
-! end of list

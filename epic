@@ -1,5 +1,5 @@
-! Title: Epic Games / Fortnite full block (ABP/AdGuard)
-! Description: Blocks Epic Games services (store, launcher, Fortnite, EOS) and common CDNs/shorteners
+! Title: Epic games / fortnite full block (domain-only, ABP/AdGuard)
+! Description: Domain-only rules compatible with parsers that reject mid-label wildcards and paths
 ! Version: 2025-09-06
 ! Syntax: Adblock Plus
 
@@ -8,55 +8,85 @@
 ||epicgames.dev^
 ||epicgamescdn.com^
 
-! launcher / store / auth (redundant with apex, kept for clarity)
+! epic branch zones (cover many service hosts)
+||ol.epicgames.com^
+||ak.epicgames.com^
+||on.epicgames.com^
+
+! launcher / store / auth
 ||store.epicgames.com^
 ||launcher.epicgames.com^
+||launcher.store.epicgames.com^
 ||accounts.epicgames.com^
 ||oauth.epicgames.com^
 ||tracking.epicgames.com^
 ||logs.epicgames.com^
 ||static-assets-prod.epicgames.com^
+||store-site-backend-static.ak.epicgames.com^
+||store-content.ak.epicgames.com^
 ||assets.on.epicgames.com^
 
-! service cluster (redundant with apex)
-||*.ol.epicgames.com^
-||account-public-service-prod*.ol.epicgames.com^
-||friends-public-service-prod*.ol.epicgames.com^
-||entitlement-public-service-prod*.ol.epicgames.com^
-||catalog-public-service-prod*.ol.epicgames.com^
-||lightswitch-public-service-prod*.ol.epicgames.com^
-||launcher-public-service-prod*.ol.epicgames.com^
-||datastorage-public-service-*.ol.epicgames.com^
+! explicit service endpoints (no wildcards)
+||account-public-service-prod03.ol.epicgames.com^
+||launcherwaitingroom-public-service-prod06.ol.epicgames.com^
+||launcher-public-service-prod06.ol.epicgames.com^
+||launcher-website-prod07.ol.epicgames.com^
+||accounts.launcher-website-prod07.ol.epicgames.com^
+||datarouter.ol.epicgames.com^
+||datarouter-weighted.ol.epicgames.com^
+||datarouter.cfef.live.use1a.on.epicgames.com^
+||entitlement-public-service-prod08.ol.epicgames.com^
+||orderprocessor-public-service-ecomprod01.ol.epicgames.com^
+||catalog-public-service-prod06.ol.epicgames.com^
+||friends-public-service-prod06.ol.epicgames.com^
+||lightswitch-public-service-prod06.ol.epicgames.com^
+||lightswitch-public-service-prod.ol.epicgames.com^
+||accountportal-website-prod07.ol.epicgames.com^
+||ut-public-service-prod10.ol.epicgames.com^
+||presence-public-service-prod.ak.epicgames.com^
+||launcher-public-service-prod.ak.epicgames.com^
+||account-public-service-prod.ak.epicgames.com^
+||links-public-service-live.ol.epicgames.com^
+||party-service-prod.ol.epicgames.com^
+||fngw-mcp-gc-livefn.ol.epicgames.com^
+||library-service.live.use1a.on.epicgames.com^
+||datastorage-public-service-liveegs.live.use1a.on.epicgames.com^
+||fortnitecontent-website-prod07.ol.epicgames.com^
+||fn-service-discovery-live-public.ogs.live.on.epicgames.com^
 
-! downloads / CDN used by the launcher
-||download*.epicgames.com^
-||epicgames-download*.akamaized.net^
+! downloads / cdns
+||download.epicgames.com^
+||download2.epicgames.com^
+||download3.epicgames.com^
+||download4.epicgames.com^
+||fastly-download.epicgames.com^
+||epicgames-download1.akamaized.net^
+||cdn1.unrealengine.com^
+||cdn2.unrealengine.com^
 
-! fortnite
+! fortnite + eos
 ||fortnite.com^
 ||fn.gg^
-||cdn2.unrealengine.com^/fortnite/
-
-! epic online services (EOS)
 ||api.epicgames.dev^
 ||eos.epicgames.com^
 
-! easy anti-cheat (used by Epic titles)
+! easy anti-cheat (often invoked by epic titles)
 ||easy.ac^
 ||eac-cdn.com^
 
-! short links often used by epic
+! short links used by epic
 ||epic.gm^
 ||egs.link^
 
-! optional: other epic-owned game properties (uncomment to block)
-! ||rocketleague.com^
-! ||psyonix.com^
-! ||fallguys.com^
-! ||mediatonicgames.com^
 
-! optional: unreal properties (will block docs/marketplace/CDN)
-! ||unrealengine.com^
-! ||cdn.unrealengine.com^
+! other epic-owned game properties (uncomment to block)
+||rocketleague.com^
+||psyonix.com^
+||fallguys.com^
+||mediatonicgames.com^
+
+! unreal properties (will block docs/marketplace/CDN)
+||unrealengine.com^
+||cdn.unrealengine.com^
 
 ! end of list
