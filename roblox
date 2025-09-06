@@ -1,30 +1,12 @@
-# Block Roblox and related services
-127.0.0.1 roblox.com
-127.0.0.1 www.roblox.com
-127.0.0.1 api.roblox.com
-127.0.0.1 setup.roblox.com
-127.0.0.1 assetgame.roblox.com
-127.0.0.1 web.roblox.com
-127.0.0.1 games.roblox.com
-127.0.0.1 friends.roblox.com
-127.0.0.1 presence.roblox.com
-127.0.0.1 chat.roblox.com
-127.0.0.1 economy.roblox.com
-127.0.0.1 avatar.roblox.com
-127.0.0.1 thumbnails.roblox.com
-127.0.0.1 localization.roblox.com
-127.0.0.1 notifications.roblox.com
-127.0.0.1 billing.roblox.com
-127.0.0.1 accountsettings.roblox.com
-127.0.0.1 auth.roblox.com
-127.0.0.1 users.roblox.com
-127.0.0.1 develop.roblox.com
-127.0.0.1 clientsettings.roblox.com
-127.0.0.1 realtimetranslation.roblox.com
-127.0.0.1 analytics.roblox.com
-127.0.0.1 ads.roblox.com
-127.0.0.1 rbxcdn.com
-127.0.0.1 www.rbxcdn.com
-127.0.0.1 images.rbxcdn.com
-127.0.0.1 media.roblox.com
-#
+! Title: Roblox full block (ABP/AdGuard)
+! Description: Blocks Roblox main site, subdomains, CDN, and asset delivery
+! Version: 2025-09-06
+! Syntax: Adblock Plus
+
+! core domain (covers all subdomains)
+||roblox.com^
+
+! cdn and asset hosts
+||rbxcdn.com^
+||rbx.com^
+||roblox.media^
